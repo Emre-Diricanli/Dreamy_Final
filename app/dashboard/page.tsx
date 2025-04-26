@@ -13,6 +13,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import {DarkModeToggle} from "@/components/ui/darkModeToggle";
 
 export default function Page() {
   return (
@@ -31,6 +32,7 @@ export default function Page() {
             orientation="vertical"
             className="mr-2 data-[orientation=vertical]:h-4"
           />
+
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem className="hidden md:block">
@@ -42,12 +44,15 @@ export default function Page() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
+          <div className="absolute right-5">
+          <DarkModeToggle />
+          </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           {Array.from({ length: 24 }).map((_, index) => (
             <div
               key={index}
-              className="bg-muted/50 aspect-video h-12 w-full rounded-lg"
+              className="bg-muted/50 aspect-video h-18 w-full rounded-xl"
             />
           ))}
         </div>
