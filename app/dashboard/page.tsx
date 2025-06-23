@@ -67,8 +67,8 @@ export default function Page() {
           }
       >
         <AppSidebar />
-        <SidebarInset>
-          <header className="bg-background sticky top-0 flex shrink-0 items-center gap-2 border-b p-4">
+        <SidebarInset className="bg-gradient-to-br from-muted/50 to-background">
+          <header className="bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10 flex shrink-0 items-center gap-2 border-b p-4 shadow-sm rounded-b-lg">
             <SidebarTrigger className="-ml-1" />
             <Separator
                 orientation="vertical"
@@ -95,7 +95,7 @@ export default function Page() {
             </div>
           </header>
 
-          <div className="flex flex-1 flex-col gap-4 p-6">
+          <div className="flex flex-1 flex-col gap-4 p-6 max-w-4xl mx-auto w-full">
             {viewMode === "newDream" ? (
                 <NewDreamForm />
             ) : selectedDream ? (
@@ -106,7 +106,7 @@ export default function Page() {
                     showRecurringElements={true}
                 />
             ) : (
-                <div className="text-center p-12">
+                <div className="text-center p-12 animate-in fade-in slide-in-from-top-2">
                   <h2 className="text-xl font-medium mb-2">Select a dream from the sidebar</h2>
                   <p className="text-gray-500 dark:text-gray-400">Click on any dream entry to view its details</p>
                 </div>
