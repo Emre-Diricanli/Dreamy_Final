@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {RiZzzFill} from "react-icons/ri";
-// import { loginWithGoogle } from "@/lib/appwrite/auth";
+import { loginWithGoogle } from "@/lib/appwrite/auth";
 
 export function LoginForm({
   className,
